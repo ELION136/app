@@ -1,0 +1,40 @@
+# Dependencias
+/node_modules
+
+# Next.js build
+/.next/
+/out/
+
+# Producción
+/deploy
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Variables de entorno (MUY IMPORTANTE)
+.env
+.env.local
+.env.development
+.env.production
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Coverage (tests)
+/coverage/
+
+# Archivos temporales
+*.tmp
+*.temp
