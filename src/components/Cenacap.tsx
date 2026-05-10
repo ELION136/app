@@ -18,12 +18,12 @@ export default function Cenacap() {
               className="brand-logo"
               />
             </div>
-            <div className="eyebrow" style={{ margin: 0 }}>
+            <div className="eyebrow" style={{ margin: 0}}>
               <span>CENACAP</span>
             </div>
           </div>
           <h2 className="section-title">
-            Centro de Capacitación <em>Técnica Privada</em>
+            Centro de Capacitación <em>Técnica Privado</em>
           </h2>
           <p className="section-sub">
             Formación técnica de excelencia orientada al mundo laboral con

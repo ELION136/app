@@ -59,15 +59,16 @@ export default function Hero() {
           <span className="kicker">
             Corporación Boliviana de Talento y Formación Integral
           </span>{" "}
-          Formación integral
+          Formación Integral
           <br />
-          para el <em>futuro</em> de Bolivia
+          Para el <em>Futuro</em> de Bolivia
         </h1>
         <p className="hero-desc">
-          Impulsamos el aprendizaje, la salud física, el bienestar y la inclusión
-          social a través de programas educativos y deportivos de excelencia con{" "}
-          <strong style={{ color: "#00000" }}>CENACAP</strong> e{" "}
-          <strong style={{ color: "#00000" }}>INFOCADE</strong>.
+          Impulsamos el Aprendizaje, la Salud Física, el Bienestar y la Inclusión
+          Social a Través de Programas Educativos y Deportivos de Excelencia con{" "}
+          <strong style={{ color: "#00000" }}>CENACAP</strong> ,{" "}
+          <strong style={{ color: "#00000" }}>INFOCADE</strong> Y {" "}
+          <strong style={{ color: "#00000" }}>NUESTRAS FUNDACIONES</strong>
         </p>
         <div className="hero-actions">
           <a href="#cenacap" className="btn btn-primary">
@@ -93,6 +94,14 @@ export default function Hero() {
           </a>
           <a href="#infocade" className="hero-pill">
             <span className="hero-pill-name">INFOCADE</span>
+            <span className="hero-pill-sub">Instituto de Formación Deportiva</span>
+          </a>
+          <a href="#infocade" className="hero-pill">
+            <span className="hero-pill-name">FUNDACION 1</span>
+            <span className="hero-pill-sub">Instituto de Formación Deportiva</span>
+          </a>
+          <a href="#infocade" className="hero-pill">
+            <span className="hero-pill-name">FUNDACION 2</span>
             <span className="hero-pill-sub">Instituto de Formación Deportiva</span>
           </a>
         </div>

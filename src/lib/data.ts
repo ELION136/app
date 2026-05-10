@@ -107,28 +107,26 @@ export const cenacapCarreras = {
       categoria: "Gestión y Calidad",
       icono: "fa-leaf",
       cursos: [
-        { nombre: "Sistemas de Gestión Ambiental", desc: "Gestión ambiental empresarial, normativas ISO 14001 y desarrollo sostenible.", modalidad: "Presencial / Virtual", certificado: true, imagen: "/assets/img/gestion-ambiental.jpg" },
-        { nombre: "Sistemas de Gestión de Calidad", desc: "Implementación de normas ISO 9001, auditoría de calidad y mejora continua.", modalidad: "Presencial", certificado: true, imagen: "/assets/img/gestion-calidad.jpg" },
-        { nombre: "Supervisión y Liderazgo en Prevención de Riesgos", desc: "Gestión de riesgos laborales, seguridad industrial y salud ocupacional.", modalidad: "Presencial", certificado: true, imagen: "/assets/img/prevencion-riesgos.jpg" },
+        { nombre: "Sistemas de Gestión Ambiental", desc: "Gestión ambiental empresarial, normativas ISO 14001 y desarrollo sostenible.", modalidad: "Presencial / Virtual", certificado: true, imagen: "/assets/img/1.png" },
+        { nombre: "Sistemas de Gestión de Calidad", desc: "Implementación de normas ISO 9001, auditoría de calidad y mejora continua.", modalidad: "Presencial", certificado: true, imagen: "/assets/img/2.png" },
+        { nombre: "Supervisión y Liderazgo en Prevención de Riesgos", desc: "Gestión de riesgos laborales, seguridad industrial y salud ocupacional.", modalidad: "Presencial", certificado: true, imagen: "/assets/img/5.png" },
       ],
     },
     {
       categoria: "Diseño y Tecnología",
       icono: "fa-palette",
       cursos: [
-        { nombre: "Diseño Gráfico y Producción Audiovisual", desc: "Adobe Creative Suite, motion graphics, edición de video y producción digital.", modalidad: "Presencial / Virtual", certificado: true, imagen: "/assets/img/diseno-grafico.jpg" },
-        { nombre: "Microsoft Project", desc: "Gestión de proyectos con MS Project, planificación y control de cronogramas.", modalidad: "Virtual", certificado: true, imagen: "/assets/img/ms-project.jpg" },
-        { nombre: "Informática Industrial", desc: "Automatización, control industrial y sistemas de información empresarial.", modalidad: "Presencial", certificado: true, imagen: "/assets/img/informatica-industrial.jpg" },
+        { nombre: "Diseño Gráfico y Producción Audiovisual", desc: "Adobe Creative Suite, motion graphics, edición de video y producción digital.", modalidad: "Presencial / Virtual", certificado: true, imagen: "/assets/img/6.png" },
+        { nombre: "Microsoft Project", desc: "Gestión de proyectos con MS Project, planificación y control de cronogramas.", modalidad: "Virtual", certificado: true, imagen: "/assets/img/3.png" },
       ],
     },
     {
       categoria: "Deporte y Rendimiento",
       icono: "fa-trophy",
       cursos: [
-        { nombre: "Sistemas Tácticos Deportivos", desc: "Análisis táctico, estrategias de juego y preparación deportiva especializada.", modalidad: "Presencial", certificado: true, imagen: "/assets/img/tacticos-deportivos.jpg" },
-        { nombre: "Deporte de Alto Rendimiento y Competición", desc: "Preparación física, mental y técnica para deportistas de élite.", modalidad: "Presencial", certificado: true, imagen: "/assets/img/alto-rendimiento.jpg" },
-        { nombre: "Deporte Competitivo", desc: "Entrenamiento sistemático para competencias locales, nacionales e internacionales.", modalidad: "Presencial", certificado: true, imagen: "/assets/img/deporte-competitivo.jpg" },
-      ],
+        { nombre: "Sistemas Tácticos Deportivos", desc: "Análisis táctico, estrategias de juego y preparación deportiva especializada.", modalidad: "Presencial", certificado: true, imagen: "/assets/img/4.png" },
+        { nombre: "Deporte de Alto Rendimiento y Competición", desc: "Preparación física, mental y técnica para deportistas de élite.", modalidad: "Presencial", certificado: true, imagen: "/assets/img/8.png" },
+       ],
     },
   ],
 };

@@ -5,25 +5,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap');
 
 :root {
-  /* ─── PALETA INSTITUCIONAL CORPORATIVA ─────── */
-  --c-primary: #1a2332;
-  --c-primary-light: #2c3e50;
-  --c-secondary: #34495e;
-  --c-accent: #5d6d7e;
-  --c-accent-dark: #2c3e50;
+  /* ─── PALETA DE COLORES ─────── */
+  --c-primary: #0F1F2E;
+  --c-primary-light: #162840;
+  --c-secondary: #1A5C38;
+  --c-accent: #4A5568;
+  --c-accent-dark: #162840;
   --c-white: #ffffff;
-  --c-surface: #f8f9fa;
+  --c-surface: #F7F3EC;
   --c-card: #ffffff;
-  --c-border: #dee2e6;
-  --c-border-light: #e9ecef;
-  --c-text: #1a2332;
-  --c-text-secondary: #495057;
-  --c-muted: #6c757d;
-  --c-gold: #c7b658;
-  --c-success: #2d6a4f;
-  --c-info: #1a2332;
-  --c-gradient-start: #1a2332;
-  --c-gradient-end: #2c3e50;
+  --c-border: #d4c9b8;
+  --c-border-light: #e8e0d2;
+  --c-text: #0F1F2E;
+  --c-text-secondary: #4A5568;
+  --c-muted: #718096;
+  --c-gold: #C9A84C;
+  --c-success: #1A5C38;
+  --c-info: #0F1F2E;
+  --c-gradient-start: #0F1F2E;
+  --c-gradient-end: #162840;
   --f-display: 'Merriweather', Georgia, 'Times New Roman', serif;
   --f-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --r-xs: 2px;
@@ -34,7 +34,7 @@
   --r-full: 9999px;
   --sh-card: 0 1px 3px rgba(0, 0, 0, 0.08);
   --sh-hover: 0 4px 12px rgba(0, 0, 0, 0.12);
-  --sh-glow: 0 0 24px rgba(26, 35, 50, 0.08);
+  --sh-glow: 0 0 24px rgba(15, 31, 46, 0.08);
   --dur: 0.25s;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -187,7 +187,7 @@ button {
 .btn-primary {
   background: var(--c-primary);
   color: var(--c-white);
-  box-shadow: 0 2px 8px rgba(26, 35, 50, 0.15);
+  box-shadow: 0 2px 8px rgba(15, 31, 46, 0.15);
 }
 
 .btn-red{
@@ -204,7 +204,7 @@ button {
 .btn-primary:hover {
   background: var(--c-primary-light);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(26, 35, 50, 0.25);
+  box-shadow: 0 4px 16px rgba(15, 31, 46, 0.25);
 }
 
 .btn-ghost {
@@ -215,7 +215,7 @@ button {
 .btn-ghost:hover {
   border-color: var(--c-primary);
   color: var(--c-primary);
-  background: rgba(26, 35, 50, 0.03);
+  background: rgba(15, 31, 46, 0.03);
   transform: translateY(-1px);
 }
 
@@ -254,27 +254,27 @@ button {
 }
 
 .chip-green {
-  background: rgba(45, 106, 79, 0.08);
-  color: #2d6a4f;
-  border: 1px solid rgba(45, 106, 79, 0.15);
+  background: rgba(26, 92, 56, 0.08);
+  color: #1A5C38;
+  border: 1px solid rgba(26, 92, 56, 0.15);
 }
 
 .chip-gold {
-  background: rgba(139, 115, 85, 0.08);
-  color: #6b5a45;
-  border: 1px solid rgba(139, 115, 85, 0.15);
+  background: rgba(201, 168, 76, 0.1);
+  color: #8b7340;
+  border: 1px solid rgba(201, 168, 76, 0.2);
 }
 
 .chip-blue {
-  background: rgba(26, 35, 50, 0.06);
+  background: rgba(15, 31, 46, 0.06);
   color: var(--c-primary);
-  border: 1px solid rgba(26, 35, 50, 0.12);
+  border: 1px solid rgba(15, 31, 46, 0.12);
 }
 
 .chip-conf {
-  background: rgba(108, 117, 125, 0.08);
+  background: rgba(113, 128, 150, 0.08);
   color: var(--c-text-secondary);
-  border: 1px solid rgba(108, 117, 125, 0.12);
+  border: 1px solid rgba(113, 128, 150, 0.12);
 }
 
 /* ─── CARD ───────────────────────────────────── */
@@ -481,20 +481,20 @@ button {
   font-family: var(--f-display);
   font-size: 2.5rem;
   font-weight: 700;
-  color: rgba(26, 35, 50, 0.06);
+  color: rgba(15, 31, 46, 0.06);
   line-height: 1;
   margin-bottom: 12px;
   transition: color var(--dur);
 }
 
 .feat-card:hover .feat-num {
-  color: rgba(139, 115, 85, 0.15);
+  color: rgba(201, 168, 76, 0.15);
 }
 
 .feat-icon {
   width: 40px;
   height: 40px;
-  background: rgba(26, 35, 50, 0.04);
+  background: rgba(15, 31, 46, 0.04);
   border-radius: var(--r-sm);
   display: flex;
   align-items: center;
@@ -554,7 +554,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(26, 35, 50, 0.5) 0%, transparent 50%);
+  background: linear-gradient(to top, rgba(15, 31, 46, 0.5) 0%, transparent 50%);
   z-index: 1;
 }
 
@@ -758,7 +758,7 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  background: linear-gradient(135deg, rgba(26, 35, 50, 0.04), rgba(44, 62, 80, 0.02));
+  background: linear-gradient(135deg, rgba(15, 31, 46, 0.04), rgba(22, 40, 64, 0.02));
   position: absolute;
   inset: 0;
   justify-content: center;
@@ -813,7 +813,7 @@ button {
 .acc-ico {
   width: 32px;
   height: 32px;
-  background: rgba(26, 35, 50, 0.04);
+  background: rgba(15, 31, 46, 0.04);
   border-radius: var(--r-xs);
   display: flex;
   align-items: center;
@@ -905,8 +905,8 @@ button {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(26, 35, 50, 0.04);
-  border: 2px solid rgba(26, 35, 50, 0.12);
+  background: rgba(15, 31, 46, 0.04);
+  border: 2px solid rgba(15, 31, 46, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1101,12 +1101,12 @@ button {
 .tab-btn.active {
   background: var(--c-primary);
   color: var(--c-white);
-  box-shadow: 0 2px 8px rgba(26, 35, 50, 0.2);
+  box-shadow: 0 2px 8px rgba(15, 31, 46, 0.2);
 }
 
 .tab-btn:not(.active):hover {
   color: var(--c-primary);
-  background: rgba(26, 35, 50, 0.03);
+  background: rgba(15, 31, 46, 0.03);
 }
 
 .tab-panel {
@@ -1254,7 +1254,7 @@ button {
 .info-ico {
   width: 36px;
   height: 36px;
-  background: rgba(26, 35, 50, 0.04);
+  background: rgba(15, 31, 46, 0.04);
   border-radius: var(--r-sm);
   display: flex;
   align-items: center;
@@ -1425,7 +1425,7 @@ button {
 }
 
 .conv-card:hover .conv-logo {
-  background: rgba(26, 35, 50, 0.04);
+  background: rgba(15, 31, 46, 0.04);
   border-color: var(--c-gold);
 }
 
@@ -1643,7 +1643,7 @@ button {
 .ins-ben-ico {
   width: 30px;
   height: 30px;
-  background: rgba(26, 35, 50, 0.04);
+  background: rgba(15, 31, 46, 0.04);
   border-radius: var(--r-xs);
   display: flex;
   align-items: center;
@@ -1723,7 +1723,7 @@ button {
 .form-input:focus {
   border-color: var(--c-primary);
   background: var(--c-white);
-  box-shadow: 0 0 0 3px rgba(26, 35, 50, 0.06);
+  box-shadow: 0 0 0 3px rgba(15, 31, 46, 0.06);
 }
 
 .form-input option {
@@ -1884,7 +1884,7 @@ button {
 .contact-ico {
   width: 36px;
   height: 36px;
-  background: rgba(26, 35, 50, 0.04);
+  background: rgba(15, 31, 46, 0.04);
   border-radius: var(--r-sm);
   display: flex;
   align-items: center;
@@ -2002,7 +2002,7 @@ button {
 
 .footer-brand strong em {
   font-style: italic;
-  color: #c4a96a;
+  color: #E8C87A;
 }
 
 .footer-brand .sub {
@@ -2025,7 +2025,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #c4a96a;
+  color: #E8C87A;
   margin-bottom: 16px;
 }
 
@@ -2054,7 +2054,7 @@ button {
 
 .footer-links a i {
   font-size: 0.5rem;
-  color: #c4a96a;
+  color: #E8C87A;
   opacity: 0.6;
 }
 
@@ -2074,7 +2074,7 @@ button {
 }
 
 .footer-copy em {
-  color: #c4a96a;
+  color: #E8C87A;
   font-style: normal;
 }
 
@@ -2170,7 +2170,7 @@ button {
 
 .nav-link:hover {
   color: var(--c-primary);
-  background: rgba(26, 35, 50, 0.03);
+  background: rgba(15, 31, 46, 0.03);
 }
 
 .nav-link .chevron {
@@ -2227,7 +2227,7 @@ button {
 }
 
 .drop-link:hover {
-  background: rgba(26, 35, 50, 0.03);
+  background: rgba(15, 31, 46, 0.03);
   color: var(--c-primary);
 }
 
@@ -2259,7 +2259,7 @@ button {
 }
 
 .nav-toggle:hover {
-  background: rgba(26, 35, 50, 0.03);
+  background: rgba(15, 31, 46, 0.03);
 }
 
 .nav-toggle span {
