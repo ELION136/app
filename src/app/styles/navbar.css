@@ -1,0 +1,391 @@
+/* ─── NAVBAR BASE ─────────────────────────────────── */
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.nav-mark {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  display: none;
+}
+
+/* Imagen del logo: transparencia natural del PNG, sin fondo */
+.nav-logo-img {
+  height: 60px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+}
+ 
+/* Logo blanco automático cuando navbar está sobre el hero oscuro */
+#navbar.transparent .nav-logo-img {
+  filter: brightness(0) invert(1);
+}
+ 
+/* Logo normal (colores reales) cuando navbar está scrolled */
+#navbar.scrolled .nav-logo-img {
+  filter: none;
+}
+ 
+/* Alineación del logo con el texto a la derecha */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  text-decoration: none;
+}
+
+.nav-logotype {
+  line-height: 1.15;
+  margin-left: 0px;
+}
+
+.nav-logotype strong {
+  display: block;
+  font-family: var(--f-body);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--c-primary);
+  letter-spacing: -0.01em;
+}
+
+.nav-logotype span {
+  font-size: 0.55rem;
+  color: var(--c-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 12px;
+  border-radius: var(--r-xs);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--c-text-secondary);
+  transition: all var(--dur) var(--ease);
+  white-space: nowrap;
+  position: relative;
+  font-family: var(--f-body);
+}
+
+.nav-link:hover {
+  color: var(--c-primary);
+  background: rgba(15, 31, 46, 0.03);
+}
+
+.nav-link .chevron {
+  font-size: 0.55rem;
+  transition: transform var(--dur) var(--ease);
+}
+
+.nav-item:hover .chevron {
+  transform: rotate(180deg);
+}
+
+.nav-drop {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 260px;
+  background: var(--c-white);
+  border: 1px solid var(--c-border-light);
+  border-radius: var(--r-sm);
+  padding: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px) scale(0.98);
+  transition: all 0.2s var(--ease);
+  z-index: 999;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.nav-item:hover .nav-drop {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.drop-label {
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  padding: 6px 10px 4px;
+}
+
+.drop-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--r-xs);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--c-text-secondary);
+  transition: all 0.15s;
+}
+
+.drop-link:hover {
+  background: rgba(15, 31, 46, 0.03);
+  color: var(--c-primary);
+}
+
+.drop-link i {
+  width: 12px;
+  color: var(--c-gold);
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.drop-divider {
+  height: 1px;
+  background: var(--c-border-light);
+  margin: 4px 0;
+}
+
+.nav-cta {
+  margin-left: 10px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: var(--r-xs);
+  transition: background 0.2s;
+}
+
+.nav-toggle:hover {
+  background: rgba(15, 31, 46, 0.03);
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--c-primary);
+  border-radius: 1px;
+  transition: all 0.3s;
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 64px;
+  inset-inline: 0;
+  bottom: 0;
+  background: var(--c-white);
+  padding: 16px 24px 28px;
+  overflow-y: auto;
+  z-index: 998;
+  transform: translateX(100%);
+  transition: transform 0.3s var(--ease);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.mobile-nav.open {
+  transform: none;
+}
+
+.mob-sec {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  padding: 16px 0 4px;
+}
+
+.mob-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--c-text-secondary);
+  border-bottom: 1px solid var(--c-border-light);
+  transition: color 0.2s;
+}
+
+.mob-link:hover {
+  color: var(--c-primary);
+}
+
+.mob-link i {
+  width: 14px;
+  color: var(--c-gold);
+  font-size: 0.75rem;
+}
+
+.mob-link.sub {
+  padding-left: 16px;
+  font-size: 0.8rem;
+  color: var(--c-muted);
+}
+
+.mob-cta {
+  margin-top: 20px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   NAVBAR — transparente sobre hero, sólido al hacer scroll
+══════════════════════════════════════════════════════════════════════════ */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  padding: 20px 0;
+  transition:
+    background 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+ 
+/* Logo y links blancos sobre hero (navbar transparente) */
+#navbar.transparent .nav-mark,
+#navbar.transparent .nav-logotype strong,
+#navbar.transparent .nav-link,
+#navbar.transparent .nav-cta {
+  color: #ffffff;
+}
+#navbar.transparent .nav-logotype span {
+  color: rgba(255, 255, 255, 0.65);
+}
+#navbar.transparent .nav-cta.btn-primary {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  color: #fff;
+}
+#navbar.transparent .nav-cta.btn-primary:hover {
+  background: var(--c-gold);
+  border-color: var(--c-gold);
+  color: #fff;
+}
+ 
+/* Toggle hamburger blanco sobre hero */
+#navbar.transparent .nav-toggle span {
+  background: #ffffff;
+}
+ 
+/* Estado scrolled — sólido */
+#navbar.scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--c-border-light);
+  padding: 12px 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+}
+#navbar.scrolled .nav-mark,
+#navbar.scrolled .nav-logotype strong,
+#navbar.scrolled .nav-link {
+  color: var(--c-primary);
+}
+#navbar.scrolled .nav-logotype span {
+  color: var(--c-muted);
+}
+ 
+/* Ocultar navbar al bajar */
+#navbar.nav-hidden {
+  transform: translateY(-100%);
+}
+ 
+/* Línea de progreso de scroll */
+.nav-scroll-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--c-gold), var(--c-secondary));
+  width: 0%;
+  transition: width 0.1s linear;
+}
+ 
+/* Drop en modo transparente */
+#navbar.transparent .nav-drop {
+  background: rgba(10, 18, 30, 0.92);
+  border-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+}
+#navbar.transparent .drop-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+#navbar.transparent .drop-link:hover {
+  color: var(--c-gold);
+  background: rgba(255, 255, 255, 0.06);
+}
+#navbar.transparent .drop-label {
+  color: rgba(255, 255, 255, 0.35);
+}
+ 
+/* Hover de nav-link: subrayado animado */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--c-gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 900px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-toggle { display: flex; }
+  .mobile-nav { display: block; }
+}

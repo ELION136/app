@@ -1,0 +1,537 @@
+/* ─── LAYOUT ─────────────────────────────────── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section-pad {
+  padding: 80px 0;
+}
+
+.section-pad-sm {
+  padding: 56px 0;
+}
+
+/* ─── DIVIDERS ───────────────────────────────── */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--c-gold);
+  margin: 0 auto 32px;
+}
+
+/* ─── TYPOGRAPHY ─────────────────────────────── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--f-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 16px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 1.5px;
+  background: var(--c-gold);
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-family: var(--f-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--c-primary);
+  margin-bottom: 16px;
+}
+
+.section-title em {
+  font-style: normal;
+  color: var(--c-gold);
+}
+
+.section-sub {
+  font-size: 1rem;
+  color: var(--c-text-secondary);
+  max-width: 600px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* ─── BTN ROBOTO ─────────────────────────────────────────────────────────── */
+.btn-roboto {
+  font-family: var(--f-alt);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+ 
+/* ─── BUTTONS ────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 0;
+  font-family: var(--f-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all var(--dur) var(--ease);
+  white-space: nowrap;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1.5px solid currentColor;
+}
+ 
+/* Primario — outline oscuro */
+.btn-primary {
+  color: var(--c-primary);
+  border-color: var(--c-primary);
+}
+.btn-primary:hover {
+  background: var(--c-primary);
+  color: var(--c-white);
+  transform: translateY(-1px);
+}
+ 
+/* Primario sobre fondo oscuro (hero carousel) — outline blanco */
+.hero-carousel .btn-primary {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+.hero-carousel .btn-primary:hover {
+  background: #ffffff;
+  color: var(--c-primary);
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+ 
+/* Ghost — igual al primario fuera del hero, alias semántico */
+.btn-ghost {
+  color: var(--c-primary);
+  border-color: var(--c-border);
+}
+.btn-ghost:hover {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+  background: rgba(15, 31, 46, 0.04);
+  transform: translateY(-1px);
+}
+ 
+/* Ghost sobre fondo oscuro */
+.hero-carousel .btn-ghost {
+  color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.hero-carousel .btn-ghost:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+ 
+/* WhatsApp — outline verde */
+.btn-wa {
+  color: #25d366;
+  border-color: #25d366;
+}
+.btn-wa:hover {
+  background: #25d366;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+ 
+/* WhatsApp sobre fondo oscuro */
+.hero-carousel .btn-wa {
+  color: #4ADE80;
+  border-color: #4ADE80;
+}
+.hero-carousel .btn-wa:hover {
+  background: #4ADE80;
+  color: var(--c-primary);
+  transform: translateY(-2px);
+}
+ 
+/* Red / alerta */
+.btn-red {
+  color: rgb(241, 114, 68);
+  border-color: rgb(233, 117, 40);
+}
+.btn-red:hover {
+  background: rgb(248, 115, 70);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+ 
+/* Tamaños */
+.btn-sm {
+  padding: 7px 14px;
+  font-size: 0.78rem;
+}
+ 
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ─── CHIPS ──────────────────────────────────── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--r-full);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.chip-green {
+  background: rgba(26, 92, 56, 0.08);
+  color: #1A5C38;
+  border: 1px solid rgba(26, 92, 56, 0.15);
+}
+
+.chip-gold {
+  background: rgba(201, 168, 76, 0.1);
+  color: #8b7340;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.chip-blue {
+  background: rgba(15, 31, 46, 0.06);
+  color: var(--c-primary);
+  border: 1px solid rgba(15, 31, 46, 0.12);
+}
+
+.chip-conf {
+  background: rgba(113, 128, 150, 0.08);
+  color: var(--c-text-secondary);
+  border: 1px solid rgba(113, 128, 150, 0.12);
+}
+
+/* ─── CARD ───────────────────────────────────── */
+.card {
+  background: var(--c-card);
+  border: 1px solid var(--c-border-light);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: all var(--dur) var(--ease);
+  box-shadow: var(--sh-card);
+}
+
+.card:hover {
+  border-color: var(--c-border);
+  box-shadow: var(--sh-hover);
+  transform: translateY(-2px);
+}
+
+/* ─── PRELOADER ──────────────────────────────── */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: var(--c-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s var(--ease), visibility 0.5s;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pre-logo {
+  font-family: var(--f-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--c-primary);
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.pre-logo em {
+  font-style: italic;
+  color: var(--c-gold);
+}
+
+.pre-sub {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  margin-bottom: 32px;
+}
+
+.pre-ring {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--c-border-light);
+  border-top-color: var(--c-primary);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── WA FLOAT ───────────────────────────────── */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 500;
+  width: 50px;
+  height: 50px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.25);
+  transition: all var(--dur) var(--ease);
+}
+
+.wa-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+}
+
+/* ─── TICKER OSCURO CON IMÁGENES REALES ─── */
+.ticker-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 14px 0;
+  background: var(--c-primary, #0f172a);
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-label {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 1.5rem;
+}
+
+.ticker-label span {
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+
+.ticker-label-line {
+  width: 1px;
+  height: 3.5rem;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent);
+}
+
+.ticker-stage {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.ticker-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ticker-fade--left {
+  left: 0;
+  background: linear-gradient(to right, var(--c-primary, #0f172a), transparent);
+}
+
+.ticker-fade--right {
+  right: 0;
+  background: linear-gradient(to left, var(--c-primary, #0f172a), transparent);
+}
+
+.ticker-track-logos {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker-track-logos:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.333%); }
+}
+
+.ticker-logo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.ticker-logo-item:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ticker-logo-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.ticker-logo-frame img {
+  display: block;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 2px;
+  filter: brightness(0.95);
+  transition: filter 0.3s;
+}
+
+.ticker-logo-item:hover .ticker-logo-frame img {
+  filter: brightness(1);
+}
+
+.ticker-logo-fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+  background: var(--c-gold, #f59e0b);
+  border-radius: 0px;
+  font-weight: 800;
+  font-size: 0.7rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.ticker-logo-name {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .ticker-section {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .ticker-label {
+    flex-direction: row;
+    padding-left: 0;
+  }
+
+  .ticker-label span {
+    writing-mode: horizontal-tb;
+    rotate: 0deg;
+  }
+
+  .ticker-label-line {
+    width: 2rem;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255,255,255,0.2), transparent);
+  }
+}
+
+/* ─── REVEAL ANIMATIONS ──────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+
+[data-reveal="left"] {
+  transform: translateX(-24px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(24px);
+}
+
+[data-reveal="scale"] {
+  transform: scale(0.96);
+}
+
+[data-reveal].visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Hover de cards con imagen target ── */
+.card-img-hover {
+  position: relative;
+  overflow: hidden;
+}
+.card-img-hover .card-hover-img {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s var(--ease);
+  z-index: 0;
+}
+.card-img-hover .card-hover-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-img-hover .card-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 18, 30, 0.88) 0%, rgba(10,18,30,0.1) 60%);
+  opacity: 0;
+  transition: opacity 0.45s var(--ease);
+  z-index: 1;
+}
+.card-img-hover .card-content {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.35s var(--ease);
+}
+.card-img-hover:hover .card-hover-img,
+.card-img-hover:hover .card-hover-overlay {
+  opacity: 1;
+}
+.card-img-hover:hover .card-content {
+  transform: translateY(-4px);
+}

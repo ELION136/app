@@ -184,7 +184,7 @@ export const stats = [
 
 export const cenacapCarreras = {
   nombre: "CENACAP",
-  cenacapLogo:"/assets/img/logocenacap.png",
+  cenacapLogo:"/assets/img/log2.png",
   carreras: [
     {
       categoria: "Gestión y Calidad",
