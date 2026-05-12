@@ -8,15 +8,20 @@ export const institution = {
   heroImage: "/assets/img/lan.png",
 };
 
-export const tickerData = [
-  { abbr: "CB", name: "Corporación Boliviana" },
-  { abbr: "CE", name: "CENACAP" },
-  { abbr: "IN", name: "INFOCADE" },
-  { abbr: "CB", name: "Cochabamba, Bolivia" },
-  { abbr: "ED", name: "Educación Técnica" },
-  { abbr: "DE", name: "Deporte de Alto Rendimiento" },
-  { abbr: "FO", name: "Formación Integral" },
-  { abbr: "CE", name: "Certificación Oficial" },
+export type TickerLogo = {
+  name: string;
+  logo: string; // path desde /public
+};
+ 
+export const tickerData: TickerLogo[] = [
+  { name: "Corporación Boliviana",          logo: "/assets/img/log1.png" },
+  { name: "CENACAP",                        logo: "/assets/img/log2.png" },
+  { name: "INFOCADE",                       logo: "/assets/img/log3.png" },
+  { name: "Ministerio de Educación",        logo: "/assets/img/log4.png" },
+  { name: "Universidad Mayor de San Simón", logo: "/assets/img/log5.png" },
+  { name: "Comité Olímpico Boliviano",      logo: "/assets/img/log6.png" },
+  { name: "Federación Boliviana Fútbol",    logo: "/assets/img/log7.png" },
+  { name: "Alcaldía Cochabamba",            logo: "/assets/img/log8.png" },
 ];
 
 export const features = [
@@ -30,13 +35,13 @@ export const features = [
     num: "02",
     icon: "fa-trophy",
     title: "Excelencia Deportiva",
-    text: "Programas de alto rendimiento, arbitraje, entrenamiento y gestión deportiva con metodologías internacionales.",
+    text: "Programas de Alto Rendimiento, arbitraje, entrenamiento y gestión deportiva con metodologías internacionales.",
   },
   {
     num: "03",
     icon: "fa-medal",
     title: "Certificación Oficial",
-    text: "Títulos reconocidos por el Ministerio de Educación de Bolivia y entidades aliadas nacionales e internacionales.",
+    text: "Títulos reconocidos por el Ministerio de Educación de Bolivia y Entidades Aliadas Nacionales e Internacionales.",
   },
   {
     num: "04",
@@ -46,11 +51,89 @@ export const features = [
   },
 ];
 
-export const autoridades = [
-  { nombre: "Mg. Juan Carlos Rojas", cargo: "Director General", foto: "" },
-  { nombre: "Lic. María Elena Vargas", cargo: "Directora Académica", foto: "" },
-  { nombre: "Prof. Roberto Quispe", cargo: "Director Deportivo INFOCADE", foto: "" },
-  { nombre: "Ing. Sandra Mamani", cargo: "Directora Técnica CENACAP", foto: "" },
+// lib/data.ts  (agrega este bloque al archivo existente o crea uno nuevo)
+
+export type Autoridad = {
+  nombre: string;
+  cargo: string;
+  foto: string;
+  iniciales: string;
+  color: string;
+  descripcionCorta: string;
+  descripcionLarga: string;
+  logros: string[];
+  redes: { linkedin: string; email: string };
+};
+
+export const autoridades: Autoridad[] = [
+  {
+    nombre: "Mg. Juan Carlos Rojas",
+    cargo: "Director General",
+    foto: "/assets/img/au1.png",
+    iniciales: "JR",
+    color: "#C9A84C",
+    descripcionCorta:
+      "Magíster en Gestión Educativa con más de 15 años liderando instituciones de formación técnica.",
+    descripcionLarga:
+      "Magíster en Gestión Educativa y Administración Pública. Ha liderado la expansión de la Corporación Boliviana de Talento y Formación Integral desde su fundación, consolidando alianzas con instituciones nacionales e internacionales. Especialista en políticas educativas y desarrollo institucional.",
+    logros: [
+      "15+ años en gestión educativa",
+      "Fundador de CBTI",
+      "Convenios con 12 instituciones internacionales",
+    ],
+    redes: { linkedin: "#", email: "jrojas@cbti.edu.bo" },
+  },
+  {
+    nombre: "Lic. María Elena Vargas",
+    cargo: "Directora Académica",
+    foto: "/assets/img/au2.png",
+    iniciales: "MV",
+    color: "#1A5C38",
+    descripcionCorta:
+      "Licenciada en Ciencias de la Educación, especialista en diseño curricular y evaluación académica.",
+    descripcionLarga:
+      "Licenciada en Ciencias de la Educación con especialización en Diseño Curricular. Responsable del desarrollo y actualización de los programas académicos de CENACAP e INFOCADE. Ha liderado la acreditación de más de 8 carreras técnicas ante el Ministerio de Educación.",
+    logros: [
+      "8 carreras acreditadas",
+      "Reforma curricular 2022-2024",
+      "Docente universitaria 10 años",
+    ],
+    redes: { linkedin: "#", email: "mvargas@cbti.edu.bo" },
+  },
+  {
+    nombre: "Prof. Roberto Quispe",
+    cargo: "Director Deportivo INFOCADE",
+    foto: "/assets/img/au3.png",
+    iniciales: "RQ",
+    color: "#0F1F2E",
+    descripcionCorta:
+      "Profesor de Educación Física y ex atleta nacional. Especialista en alto rendimiento deportivo.",
+    descripcionLarga:
+      "Profesor de Educación Física con maestría en Alto Rendimiento Deportivo. Ex atleta de selección nacional boliviana. Diseñó el modelo de formación deportiva integral de INFOCADE, que combina preparación técnica, física y psicológica para atletas de élite y árbitros profesionales.",
+    logros: [
+      "Ex atleta nacional",
+      "Maestría en Alto Rendimiento",
+      "Formó 200+ árbitros certificados",
+    ],
+    redes: { linkedin: "#", email: "rquispe@cbti.edu.bo" },
+  },
+  {
+    nombre: "Ing. Sandra Mamani",
+    cargo: "Directora Técnica CENACAP",
+    foto: "/assets/img/au4.png",
+    iniciales: "SM",
+    color: "#4A5568",
+    descripcionCorta:
+      "Ingeniera Industrial con especialización en Gestión Ambiental y Calidad. Impulsora de la formación técnica.",
+    descripcionLarga:
+      "Ingeniera Industrial graduada de la UMSS con especialización en Sistemas de Gestión Ambiental y Calidad ISO. Responsable del desarrollo técnico de los programas de CENACAP, garantizando que los egresados cumplan estándares internacionales de competencia profesional y certificación técnica.",
+    logros: [
+      "Certificación ISO 9001 institucional",
+      "Egresada UMSS",
+      "15 convenios empresariales",
+    ],
+    redes: { linkedin: "#", email: "smamani@cbti.edu.bo" },
+  },
 ];
 
 export const valores = [
