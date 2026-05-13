@@ -14,14 +14,11 @@ export type TickerLogo = {
 };
  
 export const tickerData: TickerLogo[] = [
-  { name: "Corporación Boliviana",          logo: "/assets/img/log1.png" },
-  { name: "CENACAP",                        logo: "/assets/img/log2.png" },
   { name: "INFOCADE",                       logo: "/assets/img/log3.png" },
-  { name: "Ministerio de Educación",        logo: "/assets/img/log4.png" },
-  { name: "Universidad Mayor de San Simón", logo: "/assets/img/log5.png" },
-  { name: "Comité Olímpico Boliviano",      logo: "/assets/img/log6.png" },
-  { name: "Federación Boliviana Fútbol",    logo: "/assets/img/log7.png" },
-  { name: "Alcaldía Cochabamba",            logo: "/assets/img/log8.png" },
+  { name: "CENACAP",                        logo: "/assets/img/log2.png" },
+  { name: "FUNDACION 1",                 logo: "/assets/img/log1.png" },
+  { name: "FUNDACION 2",                    logo: "/assets/img/log4.png" },
+  { name: "CLUB DE LEONES",                 logo: "/assets/img/log1.png" },
 ];
 
 export const features = [

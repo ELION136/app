@@ -20,16 +20,19 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"></link>
-
+        
         {/* ─── FUENTES ───────────────────────────────────────────────────────────
             • Noto Sans Medefaidrin → títulos grandes del hero/slider
             • Inter               → navegación, párrafos, botones (mayoría)
             • Roboto              → botones específicos con clase .btn-roboto
         ──────────────────────────────────────────────────────────────────────── */}
+
+        
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+Medefaidrin:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
+        
 
         {/* ─── PHOSPHOR ICONS (modernos, línea fina, no genérico) ─────────────── */}
         <script

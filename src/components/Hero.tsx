@@ -163,7 +163,7 @@ export default function Hero() {
         <p className="hero-desc" data-animate="fadeUp">
           Impulsamos el Aprendizaje, la Salud Física, el Bienestar y la Inclusión
           Social a través de programas educativos y deportivos de excelencia con{" "}
-          <strong>CENACAP</strong>, <strong>INFOCADE</strong> y{" "}
+          <strong>INFOCADE</strong>, <strong>CENACAP</strong> y{" "}
           <strong>Nuestras Fundaciones</strong>
         </p>
 
@@ -187,6 +187,13 @@ export default function Hero() {
         {/* Pills de unidades */}
         <div className="hero-brands" data-animate="fadeUp">
           <span className="hero-brands-sep">Nuestras unidades</span>
+           <a href="#infocade" className="hero-pill">
+            <span className="hero-pill-dot hero-pill-dot--blue" />
+            <div>
+              <span className="hero-pill-name">INFOCADE</span>
+              <span className="hero-pill-sub">Instituto de Formación Deportiva</span>
+            </div>
+          </a>
           <a href="#cenacap" className="hero-pill">
             <span className="hero-pill-dot hero-pill-dot--green" />
             <div>
@@ -194,17 +201,18 @@ export default function Hero() {
               <span className="hero-pill-sub">Centro de Capacitación Técnica</span>
             </div>
           </a>
+         
           <a href="#infocade" className="hero-pill">
-            <span className="hero-pill-dot hero-pill-dot--blue" />
+            <span className="hero-pill-dot hero-pill-dot--gold" />
             <div>
-              <span className="hero-pill-name">INFOCADE</span>
-              <span className="hero-pill-sub">Instituto de Formación Deportiva</span>
+              <span className="hero-pill-name">FUNDACIÓN 1</span>
+              <span className="hero-pill-sub">Desarrollo Comunitario</span>
             </div>
           </a>
           <a href="#infocade" className="hero-pill">
             <span className="hero-pill-dot hero-pill-dot--gold" />
             <div>
-              <span className="hero-pill-name">FUNDACIÓN 1</span>
+              <span className="hero-pill-name">FUNDACIÓN 2</span>
               <span className="hero-pill-sub">Desarrollo Comunitario</span>
             </div>
           </a>

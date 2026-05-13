@@ -162,12 +162,12 @@
  
 /* Red / alerta */
 .btn-red {
-  color: rgb(241, 114, 68);
-  border-color: rgb(233, 117, 40);
+  color: hsl(49, 90%, 68%);
+  border-color: hsl(49, 90%, 68%);
 }
 .btn-red:hover {
-  background: rgb(248, 115, 70);
-  color: #ffffff;
+  background: hsl(49, 90%, 68%);
+  color: hsl(40, 12%, 5%);
   transform: translateY(-1px);
 }
  
@@ -396,7 +396,6 @@
   align-items: center;
   gap: 10px;
   padding: 8px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   white-space: nowrap;
   flex-shrink: 0;
